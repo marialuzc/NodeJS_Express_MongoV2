@@ -1,6 +1,6 @@
 const express = require('express');
-const logic = require('../logic/usuario_logic');
 const ruta = express.Router();
+const logic = require('../logic/usuario_logic');
 
 //Endpoint de tipo GET para el recurso usuarios. Lista todos los usuarios
 ruta.get('/',(req, res) => {
@@ -74,6 +74,5 @@ ruta.delete('/:email', (req, res) => {
         })
     });
 });
-
 
 module.exports = ruta;
