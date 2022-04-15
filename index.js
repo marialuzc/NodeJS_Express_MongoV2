@@ -7,7 +7,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 // Conexión a la dase de datos mongodb
-mongoose.connect('mongodb://localhost:27017/userscoursesdb', {useNewUrlParser: true, useUnifiedTopology: true})
+// mongodb+srv://marialuzc:J123@cluster0.s9060.mongodb.net/userscoursesdb
+// mongoose.connect('mongodb://localhost:27017/userscoursesdb', {useNewUrlParser: true, useUnifiedTopology: true})
+
+mongoose.connect('mongodb+srv://marialuzc:J123@cluster0.s9060.mongodb.net/userscoursesdb', {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => console.log('Conectado a MongoDB...'))
     .catch(err => console.log('No se pudo conectar con MongoDB..', err));
 
